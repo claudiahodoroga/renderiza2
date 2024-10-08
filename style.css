@@ -1,0 +1,387 @@
+:root{
+    /*colores*/
+   --dark-cornflower-blue: #20487e;
+   --tiigers-eye: #eb9440;
+   --white: #fffffe;
+   --light-silver: #d9d9d9;
+   --sonic-silver: #797979;
+   --black: #000000;
+
+    
+    /*tipografías*/
+    --ff-gabarito: "Gabarito";
+    --ff-arial: Arial, Helvetica, sans-serif;
+
+    --fs-tagline: 70px;
+    --fs-header: 30px;
+    --fs-body: 20px;
+
+    /*espaciados*/
+    --section-padding: 40px;
+
+    /*esquinas*/
+    --r-1: 18px;
+    --r-2: 12px;
+    
+}
+
+@font-face {
+    font-family: "Gabarito";
+    src: url('./assets/Gabarito/Gabarito-VariableFont_wght.ttf');
+}
+
+/*RESETS*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Gabarito";
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--tiigers-eye);
+}
+
+a, img, span, button{
+    display: block;
+}
+
+button{
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+html{
+    font-family: var(--ff-arial);
+    scroll-behavior: smooth;
+    padding: 90px;
+}
+
+body{
+    background: var(--white);
+    color: var(--cobalt-dark);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--white);
+    border-left: 1px solid var(--tiigers-eye);
+}
+
+::-webkit-scrollbar-thumb{
+    background: hsla(32, 95%, 62%, 0.8);
+}
+::-webkit-scrollbar-thumb:hover{ 
+    background: hsla(32, 95%, 62%, 0.6); 
+}
+
+
+/*STYLING*/
+.app{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header{
+    background-color: var(--dark-cornflower-blue);
+    height: 60px;
+    border-radius: var(--r-1);
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#title{
+    height: 100%;
+    align-content: center;
+}
+
+#header-title{
+    color: var(--white);
+    font-size: var(--fs-header);
+    margin-left: 8px;
+}
+
+#deco-buttons{
+    display: flex;
+    gap: 8px;
+    margin-right: 8px;
+}
+
+.circle{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.r{
+    background-color: rgb(254, 61, 61);
+}
+
+.y{
+    background-color: rgb(252, 252, 74);
+}
+
+.g{
+    background-color: rgb(63, 227, 63);
+}
+
+.about{
+    display: flex;
+    gap: 62px;
+
+}
+
+#tagline{
+    font-size: var(--fs-tagline);
+    font-weight: bold;
+    align-content: center;
+}
+
+#cover-img{
+    height: auto;
+    max-width: 300px;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#navbar{
+    background-color: var(--light-silver);
+    display: flex;
+    gap: 20px;
+    height: 70px;
+    padding: 8px;
+    border-radius: var(--r-1);
+    align-items: center;
+}
+
+.button-nav{
+    height: 58px;
+    width: 58px;
+    border-radius: var(--r-2);
+    background-color: var(--sonic-silver);
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-nav:hover{
+    background-color: var(--tiigers-eye);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.button-nav.active{
+    background-color: var(--tiigers-eye);
+}
+
+svg{
+    height: 30px;
+}
+
+#canvas{
+    border-radius: var(--r-1);
+    border: var(--light-silver) 5px solid;
+    padding: 30px;
+    font-size: var(--fs-body);
+}
+
+
+
+/*CARD EPISODIO*/
+
+.episode-card{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: var(--r-1);
+    background-color: var(--white);
+    max-height: 500px;
+    width: auto;
+}
+
+#episode-cover img{
+    max-height: 200px;
+    width: auto;
+    border-radius: var(--r-2);
+}
+
+#ep-metadata{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#ep-title{
+    font-size: var(--fs-header);
+    font-weight: bold;
+    color: var(--dark-cornflower-blue);
+}
+
+#ep-timestamp{
+    font-size: 14px;
+    color: var(--sonic-silver);
+}
+
+#ep-desc{
+    font-size: var(--fs-body);
+    color: var(--black);
+}
+
+audio{
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 350px) {
+    .button-nav {
+        width: 35px;
+        height: 35px;
+    }
+
+    svg {
+        height: 18px;
+    }
+
+    #tagline{
+        font-size: 16px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    html {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    #header-title {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #tagline {
+        font-size: 18px;
+    }
+
+    #canvas {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .button-nav {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    #navbar{
+        justify-content: space-around;
+    }
+
+    svg {
+        height: 20px;
+    }
+
+    .circle {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html{
+        padding: 20px;
+    }
+
+    .header {
+        padding: 15px;
+        height: auto;
+    }
+
+    #title {
+        margin-bottom: 10px;
+    }
+
+    #header-title {
+        font-size: 18px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #tagline {
+        font-size: 30px;
+    }
+
+    #cover-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav {
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    #navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+    }
+
+    .button-nav {
+        width: 48px;
+        height: 48px;
+    }
+
+    svg {
+        height: 24px;
+    }
+
+    .circle {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #tagline {
+        font-size: 50px;
+    }
+}
