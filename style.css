@@ -271,6 +271,10 @@ audio{
         width: 10px;
         height: 10px;
     }
+
+    .canvas{
+        font-size: 14px;
+    }
 }
 
 
@@ -297,7 +301,7 @@ audio{
     }
 
     #canvas {
-        font-size: 14px;
+        font-size: 16px;
         padding: 20px;
     }
 
@@ -346,7 +350,7 @@ audio{
     }
 
     #tagline {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #cover-img {
@@ -377,6 +381,10 @@ audio{
     .circle {
         width: 24px;
         height: 24px;
+    }
+
+    .canvas{
+        font-size: 18px;
     }
 }
 
